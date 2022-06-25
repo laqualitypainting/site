@@ -4,8 +4,9 @@ import Nav from '../components/navbar'
 
 export default function Home() {
   return (
-      <><title>{siteTitle}</title><main>
-      <header className="text-blue-100 h-14 font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
+      <><title>{siteTitle}</title>
+      <main className='bg-slate-900'>
+      <header className="text-blue-100 h-14 rounded font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
         <div className='text-left pl-3'>
           <span className='align-sub'>
             Serving Huntsville, AL and surrounding area. Call Now! 
@@ -21,8 +22,8 @@ export default function Home() {
 
         <div id="__next">
           
-          <div className="antialiased text-gray-600">
-            <div className="bg-gradient-to-r from-sky-500 to-indigo-500">
+          <div className="bg-slate-900 antialiased text-white">
+            <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
               <div className="max-w-screen-lg mx-auto px-3 py-6">
                 <div className="jsx-4057204961 flex flex-wrap justify-between items-center">
                   <div className="jsx-4057204961">
@@ -55,7 +56,7 @@ export default function Home() {
 
             <div className="max-w-screen-lg mx-auto px-3 py-16">
               <div className="mb-12 text-center">
-                <h2 className="text-4xl text-gray-900 font-bold">Your title here</h2>
+                <h2 className="text-4xl text-white font-bold">Your title here</h2>
                 <div className="mt-4 text-xl md:px-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at.</div>
               </div>
               <div className="mt-20 flex flex-wrap items-center">
@@ -99,7 +100,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-100">
+            <div className="bg-gray-400">
               <div className="max-w-screen-lg mx-auto px-3 py-16">
                 <div className="jsx-541721229 text-center">
                   <span className="text-gray-900 inline-flex items-center font-semibold text-xl">

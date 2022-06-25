@@ -86,12 +86,12 @@ function Contact() {
 
   return (
     <Layout>
-      <div className="rounded bg-gradient-to-b from-purple-600 to-indigo-700 py-3 px-3 w-full">
+      <div className="rounded  bg-slate-900 py-3 px-3 w-full">
         <form onSubmit={handleSubmit}>
-          <div className="rounded dark:bg-slate-800 bg-white shadow w-full flex items-center justify-center my-2 min-h-screen">
-            <div className="dark:bg-slate-800 bg-white rounded py-12 lg:px-28 px-8">
+          <div className="rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 shadow w-full flex items-center justify-center my-2 min-h-screen">
+            <div className=" bg-white rounded-lg shadow-2xl py-12 lg:px-28 px-8">
               <p className="dark:text-white md:text-3xl text-xl font-bold leading-7 text-center text-gray-700">
-                Contact Me!
+                Contact Us 
               </p>
               <div className="md:flex items-center mt-12">
                 <div className="md:w-72 flex flex-col">
