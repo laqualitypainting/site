@@ -1,29 +1,21 @@
 import Link from 'next/link'
-import Layout, { siteTitle } from '../components/layout'
+import { siteTitle } from '../components/layout'
 import Nav from '../components/navbar'
+import roll from './img/roll.jpg'
+import Image from 'next/image'
+import brush from './img/brush.jpg'
+import painters from './img/painters.jpg'
 
 export default function Home() {
   return (
       <><title>{siteTitle}</title>
-      <main className='bg-slate-900'>
-      <header className="text-blue-100 h-14 rounded font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
-        <div className='text-left pl-3'>
-          <span className='align-sub'>
-            Serving Huntsville, AL and surrounding area. Call Now! 
-            <div className='text-left'>
-              <span className='align-top'>
-                1+(256) 555-5555 | contact@laqualitypainting.com 
-              </span>
-            </div>
-          </span>
-        </div>
-      </header>
+      <main className='bg-la-bg-two static'>
       <Nav/>
-
-        <div id="__next">
+      <div id='__next'>
           
-          <div className="bg-slate-900 antialiased text-white">
-            <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
+          <div className="antialiased text-white">
+            <div className='rounded bg-gradient-to-r from-sky-500 to-indigo-500
+ static'>
               <div className="max-w-screen-lg mx-auto px-3 py-6">
                 <div className="jsx-4057204961 flex flex-wrap justify-between items-center">
                   <div className="jsx-4057204961">
@@ -53,7 +45,6 @@ export default function Home() {
                 </header>
               </div>
             </div>
-
             <div className="max-w-screen-lg mx-auto px-3 py-16">
               <div className="mb-12 text-center">
                 <h2 className="text-4xl text-white font-bold">Your title here</h2>
@@ -61,29 +52,35 @@ export default function Home() {
               </div>
               <div className="mt-20 flex flex-wrap items-center">
                 <div className="w-full sm:w-1/2 text-center sm:px-6">
-                  <h3 className="text-3xl text-gray-900 font-semibold">Friendly Workers</h3>
-                  <div className="mt-6 text-xl leading-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
+                <div className="relative flex flex-col min-w-0 break-words bg-slate-900 w-full mb-8 shadow-2xl rounded-lg">
+                  <h3 className="text-3xl pt-6 text-white font-semibold">Friendly Workers</h3>
+                  <div className="mt-6 text-xl px-3 pb-6 text-white leading-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
                 </div>
-                <div className="w-full sm:w-1/2 p-6">
-                  <img src="/demo/nextjs-landing-page/assets/images/feature.svg" alt="First feature alt text" />
+                </div>
+                <div className="w-full rounded sm:w-1/2 p-6">
+                  <Image src={painters} className=" " />
                 </div>
               </div>
               <div className="mt-20 flex flex-wrap items-center flex-row-reverse">
                 <div className="w-full sm:w-1/2 text-center sm:px-6">
-                  <h3 className="text-3xl text-gray-900 font-semibold">Quality Work</h3>
+                <div className="relative flex flex-col min-w-0 break-words bg-slate-900 w-full mb-8 shadow-lg rounded-lg">
+                  <h3 className="text-3xl text-white font-semibold">Quality Work</h3>
                   <div className="mt-6 text-xl leading-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
                 </div>
+                </div>
                 <div className="w-full sm:w-1/2 p-6">
-                  <img src="/demo/nextjs-landing-page/assets/images/feature2.svg" alt="Second feature alt text" />
+                  <Image src={brush} />
                 </div>
               </div>
               <div className="mt-20 flex flex-wrap items-center">
                 <div className="w-full sm:w-1/2 text-center sm:px-6">
-                  <h3 className="text-3xl text-gray-900 font-semibold">Free estimates!</h3>
+                <div className="relative flex flex-col min-w-0 break-words bg-slate-900 w-full mb-8 shadow-lg rounded-lg">
+                  <h3 className="text-3xl text-white font-semibold">Free estimates!</h3>
                   <div className="mt-6 text-xl leading-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
                 </div>
+                </div>
                 <div className="w-full sm:w-1/2 p-6">
-                  <img src="/demo/nextjs-landing-page/assets/images/feature3.svg" alt="Third feature alt text" />
+                  <Image src={roll} />
                 </div>
               </div>
             </div>
@@ -100,6 +97,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="bg-gray-400">
               <div className="max-w-screen-lg mx-auto px-3 py-16">
                 <div className="jsx-541721229 text-center">

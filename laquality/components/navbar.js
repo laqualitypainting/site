@@ -37,7 +37,19 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="sticky top-0 flex bg-slate-900 opacity-90 flex-wrap items-center justify-between py-2 navbar-expand-lg text-black shadow">
+      <header className="text-blue-100 h-14 rounded font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
+        <div className='text-left pl-3'>
+          <span className='align-sub'>
+            Serving Huntsville, AL and surrounding area. Call Now! 
+            <div className='text-left'>
+              <span className='align-top'>
+                1+(256) 555-5555 | contact@laqualitypainting.com 
+              </span>
+            </div>
+          </span>
+        </div>
+      </header>
+      <nav className="sticky z-40 top-0 flex bg-slate-900 opacity-90 flex-wrap items-center justify-between py-2 navbar-expand-lg text-black shadow">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
