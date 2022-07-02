@@ -5,8 +5,8 @@ import { siteTitle } from "./layout";
 export const LINKS = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const menu = (
@@ -37,16 +37,28 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="sticky top-0 flex bg-white opacity-90 flex-wrap items-center justify-between py-2 navbar-expand-lg text-black shadow">
+      <header className="text-blue-100 h-14 font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
+        <div className='text-left pl-3'>
+          <span className='align-sub'>
+            Serving Huntsville, AL and surrounding area. Call Now! 
+            <div className='text-left'>
+              <span className='align-top'>
+                1+(256) 945-1312 | contact@laqualitypainting.com 
+              </span>
+            </div>
+          </span>
+        </div>
+      </header>
+      <nav className="sticky z-40 top-0 flex bg-slate-900 opacity-90 flex-wrap items-center justify-between py-2 navbar-expand-lg text-black shadow">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
-              <a className="text-black no-underline md:text-2xl text-xl font-bold hover:text-blue-400 px-2">
+              <a className="text-white no-underline md:text-2xl text-xl font-bold hover:text-blue-400 px-2">
                 {siteTitle}
                 </a>
             </Link>
             <button
-              className="text-black cursor-pointer text-xl leading-none px-0 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="text-white cursor-pointer text-xl leading-none px-0 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -61,10 +73,10 @@ export default function Nav() {
             id="example-navbar-danger"
 
           >
-            <ul className="flex text-black flex-col lg:flex-row list-none lg:ml-auto font-bold text-lg px-52 md:px-96 lg:px-11">
+            <ul className="flex text-white flex-col lg:flex-row list-none lg:ml-auto font-bold text-lg px-52 md:px-96 lg:px-11">
               {LINKS.map(({ href, label }) => (
                 <li key={`${href}${label}`}>
-                  <div className="no-underline relative px-4 py-2 font-bold text-black hover:text-blue-400 0">
+                  <div className="no-underline relative px-4 py-2 font-bold text-white hover:text-blue-400 0">
                     <Link href={href}>{label}</Link>
                   </div>
                 </li>

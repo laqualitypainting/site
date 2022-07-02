@@ -3,7 +3,7 @@ import { siteTitle } from '../components/layout';
 export default function Footer() {
   return (
     <div className='bg-black'>
-      <footer className="mt-32 text-gray-700 bg-white border-t body-font">
+      <footer className="mt-32 text-white bg-slate-900 border-t body-font">
         <div className="grid grid-cols-2">
           <div className="container flex flex-col flex-wrap px-5 py-6 lg:px-20 sm:flex-row">
             <div className="flex flex-wrap items-center justify-center text-base">
