@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <title>{siteTitle}</title>
       <Nav />
-      <main className="relative">
+      <main className="">
         <div className="bg-la-bg-two static bg-cover">
           <div className="antialiased text-white">
             <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
