@@ -18,7 +18,7 @@ export default function Home() {
               <div className="max-w-screen-lg mx-auto px-3 py-6">
                 <div className="flex flex-wrap justify-between items-center">
                   <div className="">
-                    <a className="" href="/">
+                    <Link className="" href="/">
                       <span className="text-blue-100 inline-flex items-center font-semibold text-3xl">
                         <svg
                           className="text-primary-500 stroke-current mr-1"
@@ -45,7 +45,7 @@ export default function Home() {
                         </svg>
                         L.A. Quality painting
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -57,7 +57,7 @@ export default function Home() {
                     <span className="text-gray-900">L.A. Quality Painting</span>
                   </h1>
                   <div className="text-2xl text-blue-100 mt-4 mb-10">
-                    If it's not L.A. Quality, it's not quality!
+                    If it&apos;s not L.A. Quality, it&apos;s not quality!
                   </div>
                 </header>
               </div>
@@ -65,7 +65,7 @@ export default function Home() {
 
             <div className="mx-auto mt-60 py-24">
               <div className="bg-slate-900 mt-64 min-w-fit">
-                <div class="grid gap-4 place-content-center">
+                <div className="grid gap-4 place-content-center">
                   <div className="mt-20 flex flex-wrap items-center">
                     <div className="w-full sm:w-1/2 text-center px-6">
                       <div className="relative flex flex-col max-w-lg break-words bg-gradient-to-l from-sky-500 to-indigo-500 w-full mb-8 mt-8 shadow-2xl rounded-lg">
@@ -81,7 +81,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="w-full sm:w-1/2 p-6 pl-auto ">
-                      <Image src={painters} className="rounded-lg" />
+                      <Image
+                        src={painters} 
+                        className="rounded-lg" 
+                        alt="painters"
+                      />
                     </div>
                   </div>
 
@@ -100,7 +104,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="w-full sm:w-1/2 p-6">
-                      <Image src={brush} className="rounded-lg" />
+                      <Image
+                        src={brush} 
+                        className="rounded-lg" 
+                        alt="paint brush" 
+                      />
                     </div>
                   </div>
 
@@ -119,7 +127,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="w-full sm:w-1/2 p-6 mb-8">
-                      <Image src={roll} className="rounded-lg" />
+                      <Image 
+                        src={roll} 
+                        className="rounded-lg" 
+                        alt="paint roll"
+                      />
                     </div>
                   </div>
                 </div>
@@ -172,9 +184,9 @@ export default function Home() {
                         ♥
                       </span>
                       by{" "}
-                      <a href="https://marcoagarcia.com">
+                      <Link href="https://marcoagarcia.com">
                         Marco A. Garcia
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
