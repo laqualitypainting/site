@@ -37,13 +37,13 @@ export default function Nav() {
 
   return (
     <>
-      <header className="text-blue-100 h-14 rounded font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
+      <header className="text-blue-100 h-14 font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
         <div className='text-left pl-3'>
           <span className='align-sub'>
             Serving Huntsville, AL and surrounding area. Call Now! 
             <div className='text-left'>
               <span className='align-top'>
-                1+(256) 555-5555 | contact@laqualitypainting.com 
+                1+(256) 945-1312 | contact@laqualitypainting.com 
               </span>
             </div>
           </span>
