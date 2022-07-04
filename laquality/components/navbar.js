@@ -73,7 +73,7 @@ export default function Nav() {
             id="example-navbar-danger"
 
           >
-            <ul className="flex text-white flex-col lg:flex-row list-none lg:ml-auto font-bold text-lg px-52 md:px-96 lg:px-11">
+            <ul className="flex text-white flex-col lg:flex-row list-none lg:ml-auto ml-auto font-bold text-lg px-auto  lg:px-11">
               {LINKS.map(({ href, label }) => (
                 <li key={`${href}${label}`}>
                   <div className="no-underline relative px-4 py-2 font-bold text-white hover:text-blue-400 0">
