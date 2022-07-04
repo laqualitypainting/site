@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { siteTitle } from "../components/layout";
 import Nav from "../components/navbar";
 import roll from "./img/roll.jpg";
 import Image from "next/image";
@@ -9,11 +8,11 @@ import painters from "./img/painters.jpg";
 export default function Home() {
   return (
     <>
-      <title>{siteTitle}</title>
+      <html lang="en">
+      <body >
       <Nav />
-      <main className="">
-        <div className="bg-la-bg-two static bg-cover">
-          <div className="antialiased text-white">
+        <div className="bg-la-bg-two bg-cover">
+          <div className=" text-white">
             <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
               <div className="max-w-screen-lg mx-auto px-3 py-6">
                 <div className="flex flex-wrap justify-between items-center">
@@ -194,7 +193,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </main>
+      </body>
+    </html>
     </>
   );
 }
