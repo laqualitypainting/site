@@ -150,7 +150,7 @@ function Contact() {
                   />
                 </div>
                 <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
-                  <label className="dark:text-white text-base font-semibold leading-none text-gray-800">
+                  <label className="text-base font-semibold leading-none text-gray-800">
                     Service Inquiring About
                   </label>
                   <input
@@ -167,7 +167,7 @@ function Contact() {
               </div>
               <div>
                 <div className="w-full flex flex-col mt-8">
-                  <label className="dark:text-white text-base font-semibold leading-none text-gray-800">
+                  <label className="text-base font-semibold leading-none text-gray-800">
                     Message
                   </label>
                   <textarea
