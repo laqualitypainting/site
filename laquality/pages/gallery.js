@@ -2,7 +2,7 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import Yugecard from "../components/yugecard";
 
-function Projects() {
+function Gallery() {
   return (
     <Layout>
       <div className="min-h-screen ">
@@ -19,4 +19,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Gallery;

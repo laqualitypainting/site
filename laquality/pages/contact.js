@@ -5,8 +5,8 @@ function Contact() {
   //Contact form states
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [country, setCountry] = useState("");
+  const [number, setNumber] = useState("");
+  const [service, setService] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
 
@@ -16,6 +16,7 @@ function Contact() {
   // Setting success or failure messages states
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
+  const [showValidationMessage, setShowValidationMessage] = useState(false);
 
   //form validation
   const handleValidation = () => {
@@ -25,22 +26,27 @@ function Contact() {
     if (name.length <= 0) {
       tempErrors["name"] = true;
       isValid = false;
+      setShowValidationMessage(true);
     }
     if (email.length <= 0) {
       tempErrors["email"] = true;
       isValid = false;
+      setShowValidationMessage(true);
     }
-    if (company.length <= 0) {
-      tempErrors["company"] = true;
+    if (number.length <= 0) {
+      tempErrors["number"] = true;
       isValid = false;
+      setShowValidationMessage(true);
     }
-    if (country.length <= 0) {
-      tempErrors["country"] = true;
+    if (service.length <= 0) {
+      tempErrors["service"] = true;
       isValid = false;
+      setShowValidationMessage(true);
     }
     if (message.length <= 0) {
       tempErrors["message"] = true;
       isValid = false;
+      setShowValidationMessage(true);
     }
 
     setErrors({ ...tempErrors });
@@ -54,34 +60,35 @@ function Contact() {
 
     let isValidForm = handleValidation();
 
-    if(isValidForm){
-    setButtonText("Sending");
-    const res = await fetch("/api/sendgrid", {
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        company: company,
-        country: country,
-        message: message,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+    if (isValidForm) {
+      setButtonText("Sending");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          number: number,
+          service: service,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      setShowSuccessMessage(false);
-      setShowFailureMessage(true);
-      setButtonText("Send")
-      return;
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send");
+        return;
+      }
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setShowValidationMessage(false);
+      setButtonText("Send");
     }
-    setShowSuccessMessage(true);
-    setShowFailureMessage(false);
-    setButtonText("Send");
-  }
   };
 
   return (
@@ -90,35 +97,35 @@ function Contact() {
         <form onSubmit={handleSubmit}>
           <div className="rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 shadow w-full flex items-center justify-center my-2 min-h-screen">
             <div className=" bg-white rounded-lg shadow-2xl py-12 lg:px-28 px-8">
-              <p className="dark:text-white md:text-3xl text-xl font-bold leading-7 text-center text-gray-700">
-                Contact Us 
+              <p className=" md:text-3xl text-xl font-bold leading-7 text-center text-gray-700">
+                Contact Us
               </p>
               <div className="md:flex items-center mt-12">
                 <div className="md:w-72 flex flex-col">
-                  <label className="dark:text-white text-base font-semibold leading-none text-gray-800">
+                  <label className="text-base font-semibold leading-none text-gray-800">
                     Name
                   </label>
                   <input
                     tabIndex={0}
                     arial-label="Input name"
                     type="name"
-                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
-                    placeholder="Input name"
+                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-300"
+                    placeholder="John Doe"
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
                   />
                 </div>
                 <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
-                  <label className="dark:text-white text-base font-semibold leading-none text-gray-800">
+                  <label className="text-base font-semibold leading-none text-gray-800">
                     Email Address
                   </label>
                   <input
                     tabIndex={0}
                     arial-label="Please input email address"
                     type="name"
-                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
-                    placeholder="Please input email address"
+                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-300"
+                    placeholder="email@provider.com"
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
@@ -127,33 +134,33 @@ function Contact() {
               </div>
               <div className="md:flex items-center mt-8">
                 <div className="md:w-72 flex flex-col">
-                  <label className="dark:text-white text-base font-semibold leading-none text-gray-800">
-                    Company name
+                  <label className="text-base font-semibold leading-none text-gray-800">
+                    Phone Number
                   </label>
                   <input
                     tabIndex={0}
                     role="input"
-                    arial-label="Please input company name"
+                    arial-label="phone number"
                     type="name"
-                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 "
-                    placeholder="Please input company name"
+                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-300 "
+                    placeholder="(555)555-5555"
                     onChange={(e) => {
-                      setCompany(e.target.value);
+                      setNumber(e.target.value);
                     }}
                   />
                 </div>
                 <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
                   <label className="dark:text-white text-base font-semibold leading-none text-gray-800">
-                    Country
+                    Service Inquiring About
                   </label>
                   <input
                     tabIndex={0}
-                    arial-label="Please input country name"
+                    arial-label="Please input service inquiring about"
                     type="name"
-                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
-                    placeholder="Please input country name"
+                    className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-300"
+                    placeholder="Interior/ exterior painting"
                     onChange={(e) => {
-                      setCountry(e.target.value);
+                      setService(e.target.value);
                     }}
                   />
                 </div>
@@ -168,8 +175,9 @@ function Contact() {
                     aria-label="leave a message"
                     role="textbox"
                     type="name"
-                    className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"
+                    className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-300 resize-none"
                     defaultValue={""}
+                    placeholder="Let us know about your project...."
                     onChange={(e) => {
                       setMessage(e.target.value);
                     }}
@@ -185,19 +193,23 @@ function Contact() {
                 </button>
               </div>
 
-              <div className="text-left">
-            {showSuccessMessage && (
-              <p className="text-green-500 font-semibold text-sm my-2">
-                Thank you! Your Message has been delivered succesfully.
-              </p>
-            )}
-            {showFailureMessage && (
-              <p className="text-red-500">
-                Oops! Something went wrong, please try again.
-              </p>
-            )}
-          </div>
-
+              <div className="mt-4 text-left">
+                {showSuccessMessage && (
+                  <p className="text-green-500 font-semibold text-sm my-2">
+                    Thank you! Your Message has been delivered succesfully.
+                  </p>
+                )}
+                {showFailureMessage && (
+                  <p className="text-red-500">
+                    Oops! Something went wrong, please try again.
+                  </p>
+                )}
+                {showValidationMessage && (
+                  <p className="text-red-500">
+                    Oops! All fields must be filled in, please try again.
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </form>

@@ -8,10 +8,8 @@ import painters from "./img/painters.jpg";
 export default function Home() {
   return (
     <>
-      <html lang="en">
-      <body >
       <Nav />
-        <div className="bg-la-bg-two bg-cover">
+        <div className="bg-la-bg-two bg-cover bg-fixed">
           <div className=" text-white">
             <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
               <div className="max-w-screen-lg mx-auto px-3 py-6">
@@ -193,8 +191,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </body>
-    </html>
     </>
   );
 }
