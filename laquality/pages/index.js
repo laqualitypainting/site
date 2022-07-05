@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-        <div className="bg-la-bg-two bg-cover bg-fixed bg-center bg-no-repeat">
+        <div className="bg-la-bg bg-cover bg-fixed bg-center bg-no-repeat">
           <div className=" text-white">
             <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
               <div className="max-w-screen-lg mx-auto px-3 py-6">
