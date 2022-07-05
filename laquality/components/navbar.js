@@ -4,7 +4,7 @@ import { siteTitle } from "./layout";
 
 export const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -43,7 +43,10 @@ export default function Nav() {
             Serving Huntsville, AL and surrounding area. Call Now! 
             <div className='flex flex-wrap text-left'>
               <span className='align-top'>
-                1+(256) 945-1312 | contact@laqualitypainting.com 
+                1+(256)945-1312 | 
+                <span className="hover:text-blue-400"> 
+                  <Link href="mailto:contact@laqualitypainting.com"> contact@laqualitypainting.com </Link>
+                </span>  
               </span>
             </div>
           </span>
