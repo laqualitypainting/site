@@ -43,8 +43,10 @@ export default function Nav() {
             Serving Huntsville, AL and surrounding area. Call Now! 
             <div className='flex flex-wrap text-left'>
               <span className='align-top'>
-                1+(256)945-1312 | 
-                <span className="hover:text-blue-400"> 
+                <Link href="tel:1+-256-945-1312">
+                  <span className=" hover:text-blue-300 cursor-pointer">1+(256) 945-1312</span>
+                </Link>| 
+                <span className="hover:text-blue-300"> 
                   <Link href="mailto:contact@laqualitypainting.com"> contact@laqualitypainting.com </Link>
                 </span>  
               </span>
