@@ -133,16 +133,16 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="max-w-screen-lg mx-auto px-3 py-12">
+                <div className="max-w-screen-lg  mx-auto px-3 py-12">
                   <div className="text-center flex flex-col p-4 sm:text-left sm:flex-row sm:items-center sm:justify-between sm:p-12 bg-primary-100 rounded-md">
-                    <div className="text-2xl font-semibold">
+                    <div className="text-xl text-center font-extrabold">
                        <Link href="/contact">
                         <div className="btn btn-base text-xl underline font-extrabold btn-primary hover:cursor-pointer hover:text-blue-400">
-                          Contact us for
+                          Contact us
                         </div>
                       </Link>
                       <p >
-                        Your Free Estimate!
+                        For Your Free Estimate!
                       </p>
                     </div>
                     <div className="whitespace-no-wrap mt-3 sm:mt-0 sm:ml-2">
@@ -172,18 +172,21 @@ export default function Home() {
                       <rect x="15" y="4" width="6" height="16" rx="1"></rect>
                       <path d="M4 20h14"></path>
                     </svg>
-                    L.A Quality Painting
+                    L.A. Quality Painting
                   </span>
                   <div className="mt-8 text-sm">
                     <div className="footer-copyright">
-                      © Copyright 2021 L.A Quality Painting . Developed with
-                      <span role="img" aria-label="Love" className="text-xl">
-                        ♥
+                      © Copyright 2022 L.A. Quality Painting
+                      <p className="text-xs">
+                        Developed with {" "}
+                      <span role="img" aria-label="Love" className="text-md">
+                        ♥{" "}
                       </span>
                       by{" "}
                       <Link href="https://marcoagarcia.com">
-                        Marco A. Garcia
+                        <span className="cursor-pointer hover:text-blue-200 underline">Marco A. Garcia</span>
                       </Link>
+                      </p>
                     </div>
                   </div>
                 </div>
