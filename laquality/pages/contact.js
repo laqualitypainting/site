@@ -187,29 +187,39 @@ function Contact() {
               <div className="flex items-center justify-center w-full">
                 <button
                   type="submit"
-                  className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none"
+                  className="mt-8 text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none"
                 >
                   {buttonText}
                 </button>
               </div>
 
-              <div className="mt-4 text-left">
+              <div className="pt-3 -mx-6 text-center">
                 {showSuccessMessage && (
-                  <p className="text-green-500 font-semibold text-sm my-2">
-                    Thank you! Your Message has been delivered succesfully.
+                  <><p className="text-green-500 font-semibold text-md my-2">
+                    Your Message has been delivered succesfully.
                   </p>
+                  <p className="text-green-500 font-semibold text-md my-2">
+                    Thank you
+                  </p></>
                 )}
                 {showFailureMessage && (
-                  <p className="text-red-500">
-                    Oops! Something went wrong, please try again.
+                  <><p className="text-red-500 font-semibold text-md">
+                    Oops! Something went wrong
                   </p>
+                  <p className="text-red-500 font-semibold text-md">
+                      Please try again.
+                    </p></>
                 )}
                 {showValidationMessage && (
-                  <p className="text-red-500">
-                    Oops! All fields must be filled in, please try again.
+                  <><p className="text-red-500 font-semibold text-md">
+                    Oops! All fields must be filled in
                   </p>
+                  <p className="text-red-500 font-semibold text-md">
+                    Please try again.
+                  </p></>
                 )}
               </div>
+
             </div>
           </div>
         </form>
