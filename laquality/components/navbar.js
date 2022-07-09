@@ -38,17 +38,22 @@ export default function Nav() {
   return (
     <>
       <header className="flex flex-wrap text-blue-100 h-24 md:h-12 font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
-        <div className='flex flex-wrap text-left pl-3'>
-          <span className='align-sub'>
-            Serving Huntsville, AL and surrounding area. Call Now! 
-            <div className='flex flex-wrap text-left'>
-              <span className='align-top'>
+        <div className="flex flex-wrap text-left pl-3">
+          <span className="align-sub">
+            Serving Huntsville, AL and surrounding area. Call Now!
+            <div className="flex flex-wrap text-left">
+              <span className="align-top">
                 <Link href="tel:1+-256-945-1312">
-                  <span className=" hover:text-blue-300 cursor-pointer">1+(256) 945-1312</span>
-                </Link>| 
-                <span className="hover:text-blue-300"> 
-                  <Link href="mailto:contact@laqualitypainting.com"> contact@laqualitypainting.com </Link>
-                </span>  
+                  <span className=" hover:text-blue-300 cursor-pointer">
+                    1+(256) 945-1312
+                  </span>
+                </Link>
+                {" "} | {" "}
+                <span className="hover:text-blue-300">
+                  <Link href="mailto:contact@laqualitypainting.com">
+                    contact@laqualitypainting.com
+                  </Link>
+                </span>
               </span>
             </div>
           </span>
@@ -60,7 +65,7 @@ export default function Nav() {
             <Link href="/">
               <a className="text-white no-underline md:text-2xl text-xl font-bold hover:text-blue-400 px-2">
                 {siteTitle}
-                </a>
+              </a>
             </Link>
             <button
               className="text-white cursor-pointer text-xl leading-none px-0 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -76,7 +81,6 @@ export default function Nav() {
               (navbarOpen ? " flex" : " hidden")
             }
             id="example-navbar-danger"
-
           >
             <ul className="flex text-white flex-col lg:flex-row list-none lg:ml-auto ml-auto font-bold text-lg px-auto  lg:px-11">
               {LINKS.map(({ href, label }) => (
