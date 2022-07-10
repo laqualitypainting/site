@@ -66,9 +66,9 @@ export default function Home() {
                   <div className="mt-20 flex flex-wrap items-center">
                     <div className="w-full sm:w-1/2 text-center px-6">
                       <div className="relative flex flex-col max-w-lg break-words bg-gradient-to-l from-sky-500 to-indigo-500 w-full mb-8 mt-8 shadow-2xl rounded-lg">
-                        <h3 className="text-3xl pt-6 text-white font-extrabold">
+                        <h2 className="text-3xl pt-6 text-white font-extrabold">
                           Friendly Workers
-                        </h3>
+                        </h2>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Suspendisse bibendum, nunc non posuere
@@ -82,6 +82,8 @@ export default function Home() {
                         src={painters} 
                         className="rounded-lg" 
                         alt="painters"
+                        width={302}
+                        height={475}
                       />
                     </div>
                   </div>
@@ -105,6 +107,8 @@ export default function Home() {
                         src={brush} 
                         className="rounded-lg" 
                         alt="paint brush" 
+                        width={576}
+                        height={384}
                       />
                     </div>
                   </div>
@@ -112,9 +116,9 @@ export default function Home() {
                   <div className="mt-20 flex flex-wrap items-center">
                     <div className="w-full sm:w-1/2 text-center px-6">
                       <div className="relative flex flex-col max-w-lg break-words bg-gradient-to-l from-sky-500 to-indigo-500  w-full mb-8 shadow-2xl rounded-lg">
-                        <h3 className="text-3xl text-white pt-6 font-extrabold">
+                        <h4 className="text-3xl text-white pt-6 font-extrabold">
                           Free estimates!
-                        </h3>
+                        </h4>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Suspendisse bibendum, nunc non posuere
@@ -128,6 +132,8 @@ export default function Home() {
                         src={roll} 
                         className="rounded-lg" 
                         alt="paint roll"
+                        width={576}
+                        height={384}
                       />
                     </div>
                   </div>
@@ -151,7 +157,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-400 mt-72">
+            <div className="bg-gray-500 mt-72">
               <div className="max-w-screen-lg mx-auto px-3 py-16">
                 <div className="text-center">
                   <span className="text-gray-900 inline-flex items-center font-semibold text-xl">
