@@ -4,6 +4,8 @@ import roll from "./img/roll.jpg";
 import Image from "next/image";
 import brush from "./img/brush.jpg";
 import painters from "./img/painters.jpg";
+import Slideshow from "../components/slideshow";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -11,6 +13,23 @@ export default function Home() {
       <Nav />
         <div className="bg-la-bg bg-cover bg-fixed bg-center bg-no-repeat">
           <div className=" text-white">
+          <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.2,
+            },
+          },
+        }}
+      >
             <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
               <div className="max-w-screen-lg mx-auto px-3 py-6">
                 <div className="flex flex-wrap justify-between items-center">
@@ -157,6 +176,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="bg-gray-500 mt-72">
               <div className="max-w-screen-lg mx-auto px-3 py-16">
                 <div className="text-center">
@@ -198,6 +218,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </motion.div>
           </div>
         </div>
     </>
