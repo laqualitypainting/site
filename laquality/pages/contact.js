@@ -94,7 +94,7 @@ function Contact() {
 
   return (
     <Layout>
-      <div className="rounded  bg-slate-900 py-3 px-3 w-full">
+      <div className="rounded pt-20 bg-slate-900 py-3 px-3 w-full">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -113,7 +113,7 @@ function Contact() {
           }}
         >
           <form onSubmit={handleSubmit}>
-            <div className="rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 shadow w-full flex items-center justify-center my-2 min-h-screen">
+            <div className="py-3 px-3 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 shadow w-full flex items-center justify-center my-2 min-h-screen">
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -131,7 +131,7 @@ function Contact() {
                   },
                 }}
               >
-                <div className=" bg-white rounded-lg shadow-2xl py-12 lg:px-28 px-8">
+                <div className="bg-white rounded-lg shadow-2xl py-12 lg:px-28 px-8">
                 <motion.div
                 initial="hidden"
                 animate="visible"

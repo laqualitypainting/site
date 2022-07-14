@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Layout from "../components/layout";
-import Yugecard from "../components/yugecard";
 import React from "react";
 import Slideshow from "../components/slideshow";
 import { motion } from "framer-motion";
@@ -25,7 +23,7 @@ function Gallery() {
           },
         }}
       >
-        <div>
+        <div className="pt-20">
           <Slideshow />
         </div>
       </motion.div>
@@ -34,15 +32,3 @@ function Gallery() {
 }
 
 export default Gallery;
-
-/*<div className="min-h-screen ">
-<div className="flex flex-wrap justify-center -mx-4">
-  <div className="w-full px-4">
-    <div className="text-center mx-auto">
-      <Yugecard/>
-    </div>
-  </div>
-</div>
-
-</div>
-*/
