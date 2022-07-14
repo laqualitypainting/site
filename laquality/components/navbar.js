@@ -59,11 +59,11 @@ export default function Nav() {
           </span>
         </div>
       </header>
-      <nav className="sticky z-40 top-0 flex bg-slate-900 opacity-90 flex-wrap items-center justify-between py-2 navbar-expand-lg text-black shadow">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <nav className="sticky z-40 top-0 flex bg-slate-900 opacity-95 flex-wrap items-center justify-between py-2 navbar-expand-lg text-black shadow">
+        <div className="container pb-2 pt-1 px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
-              <a className="text-white no-underline md:text-2xl text-xl font-bold hover:text-blue-400 px-2">
+              <a className="text-white  no-underline md:text-2xl text-xl font-bold hover:text-blue-400 px-2">
                 {siteTitle}
               </a>
             </Link>
