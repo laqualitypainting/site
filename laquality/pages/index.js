@@ -106,7 +106,7 @@ export default function Home() {
                           Respectful Workers
                         </h2>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
-                          Quality work means nothing if you don't get treated
+                          Quality work means nothing if you don&apos;t get treated
                           with respect. We take pride in having some of the most
                           friendliest and respectful workers in all of Alabama!
                         </div>
@@ -131,8 +131,8 @@ export default function Home() {
                         </h3>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
                           Not all painting companies are created equal. At L.A.
-                          Quality we put quality first. That's why we have
-                          'quality' in our name. We offer reasonable prices with
+                          Quality we put quality first. That&apos;s why we have
+                          &apos;quality&apos; in our name. We offer reasonable prices with
                           superior quality!
                         </div>
                       </div>
