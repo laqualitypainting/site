@@ -197,7 +197,7 @@ export default function Home() {
             <div className="bg-gray-500 mt-72">
               <div className="max-w-screen-lg mx-auto px-3 py-16">
                 <div className="text-center">
-                  <span className="text-gray-900 inline-flex items-center font-semibold text-xl">
+                  <span className="text-blue-100 inline-flex items-center font-semibold text-xl">
                     <svg
                       className="text-primary-500 stroke-current mr-1"
                       xmlns="http://www.w3.org/2000/svg"

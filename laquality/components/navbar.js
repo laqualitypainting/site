@@ -40,7 +40,7 @@ export default function Nav() {
       <header className="flex flex-wrap text-blue-100 h-24 md:h-12 font-extrabold bg-gradient-to-r from-sky-500 to-indigo-500">
         <div className="flex flex-wrap text-left pl-3">
           <span className="align-sub">
-            Serving Huntsville, AL and surrounding area. Call Now!
+            Painter serving Huntsville, AL and surrounding area. Call Now!
             <div className="flex flex-wrap text-left">
               <span className="align-top">
                 <Link href="tel:1+-256-945-1312">
