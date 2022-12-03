@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 import React from "react";
-import Slideshow from "../components/slideshow";
 import { motion } from "framer-motion";
+import SimpleGallery from "../components/single-card-gall";
 
 function Gallery() {
   return (
@@ -24,7 +24,59 @@ function Gallery() {
         }}
       >
         <div className="pt-20">
-          <Slideshow />
+          <SimpleGallery
+            galleryID="my-test-gallery"
+            images={[
+              {
+                largeURL: "/converted/bathroom.webp",
+                thumbnailURL: "/converted/bathroomSmall.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/converted/bathroom2.webp",
+                thumbnailURL: "/converted/bathroom2Small.webp",
+                width: 720,
+                height: 960,
+              },
+              {
+                largeURL: "/converted/cabinets1.webp",
+                thumbnailURL: "/converted/cabinets1Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/converted/cabinets2.webp",
+                thumbnailURL: "/converted/cabinets2Small.webp",
+                width: 786,
+                height: 1024,
+              },
+              {
+                largeURL: "/converted/chand.webp",
+                thumbnailURL: "/converted/chandSmall.webp",
+                width: 720,
+                height: 960,
+              },
+              {
+                largeURL: "/converted/floor1.webp",
+                thumbnailURL: "/converted/floor1Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/converted/floor2.webp",
+                thumbnailURL: "/converted/floor2Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/converted/sink.webp",
+                thumbnailURL: "/converted/sinkSmall.webp",
+                width: 576,
+                height: 1024,
+              },
+            ]}
+          />
         </div>
       </motion.div>
     </Layout>

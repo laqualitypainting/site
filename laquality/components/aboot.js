@@ -13,12 +13,12 @@ export default function Yugecard() {
             <p className="">
               L.A. Quality painting is a family owned and operated business
               located in Huntsville, Alabama. With over 20 years of experience,
-              Eddie, the patriarch of the family, is still passionate about his
+              Eddie, the lead painter, is still passionate about his
               work.
             </p>
             <p className="pb-4">
               Services offered include interior/exterior painting, kitchen cabinet refurnish,
-              drywall hanging/finish, foundation repairs, flooring, tile, popcorn ceiling removal,
+              drywall hanging/finish, flooring, tile, popcorn ceiling removal,
               and many more! If you need a job done chances are we can do it!{" "}
               <span className="underline">
                 <Link href="/contact">Contact us</Link>
