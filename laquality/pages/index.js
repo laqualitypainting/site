@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <div className="bg-la-bg bg-cover bg-fixed bg-center bg-no-repeat">
+      <div className=" bg-la-bgSmall md:bg-la-bg bg-cover bg-fixed bg-center bg-no-repeat">
         <div className="text-white">
           <motion.div initial="hidden" animate="visible" variants={variants}>
             <div className="rounded bg-gradient-to-r from-sky-500 to-indigo-500">
