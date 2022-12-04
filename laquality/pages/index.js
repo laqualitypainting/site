@@ -92,7 +92,7 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <div className="mx-auto mt-60 py-24">
+            <div className="mx-auto mt-60 py-24 ">
               <div className="bg-slate-900 mt-64 min-w-fit">
                 <div className="grid gap-4 place-content-center">
                   <div className="mt-20 flex flex-wrap items-center">
@@ -106,7 +106,7 @@ export default function Home() {
                        </div>
                       </div>
                     </div>
-                    <div className="w-full sm:w-1/2 p-6 ml-7 md:ml-0 pl-auto ">
+                    <div className="w-full sm:w-1/2 p-6 ml-5 md:ml-0 pl-auto ">
                       <Image
                         src={painters}
                         className="rounded-lg "
@@ -119,14 +119,13 @@ export default function Home() {
 
                   <div className="mt-20 flex flex-wrap items-center flex-row-reverse">
                     <div className="w-full sm:w-1/2 text-center px-6">
-                      <div className="relative flex flex-col max-w-lg break-words bg-gradient-to-r from-sky-500 to-indigo-500 w-full mb-8 shadow-2xl rounded-lg">
+                      <div className="relative h-64 flex flex-col max-w-lg break-words bg-gradient-to-r from-sky-500 to-indigo-500 w-full mb-8 shadow-2xl rounded-lg">
                         <h3 className="text-3xl pt-6 text-white font-extrabold">
                           Quality Work
                         </h3>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
                           Not all painting companies are created equal. At L.A.
-                          Quality we put quality first. That&apos;s why we have
-                          &apos;quality&apos; in our name. We offer reasonable prices with
+                          Quality we put quality first. We offer reasonable prices with
                           superior quality!
                         </div>
                       </div>
@@ -144,19 +143,18 @@ export default function Home() {
 
                   <div className="mt-20 flex flex-wrap items-center">
                     <div className="w-full sm:w-1/2 text-center px-6">
-                      <div className="relative flex flex-col max-w-lg break-words bg-gradient-to-l from-sky-500 to-indigo-500  w-full mb-8 shadow-2xl rounded-lg">
+                      <div className="relative h-64 flex flex-col max-w-lg break-words bg-gradient-to-l from-sky-500 to-indigo-500  w-full mb-8 shadow-2xl rounded-lg">
                         <h4 className="text-3xl text-white pt-6 font-extrabold">
                           Free estimates!
                         </h4>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
-                          Nothing beats free! Get in touch with us now to
-                          schedule your free estimate. Contact us by phone,
-                          email, or click{" "}
-                          <span className=" underline font-extrabold hover:text-blue-400">
+                          Nothing beats free! Contact us by phone,
+                          email, or{" "}
+                          <span className=" font-extrabold text-cyan-300 hover:text-cyan-400">
                             {" "}
-                            <Link href="/contact"> here</Link>
+                            <Link href="/contact"> click this link</Link>
                           </span>{" "}
-                          to fill out our contact form any time of the day.
+                          and fill out a contact form.
                         </div>
                       </div>
                     </div>
@@ -176,7 +174,7 @@ export default function Home() {
                   <div className="text-center flex flex-col p-4 sm:text-left sm:flex-row sm:items-center sm:justify-between sm:p-12 bg-primary-100 rounded-md">
                     <div className="text-xl text-center font-extrabold">
                       <Link href="/contact">
-                        <div className="btn btn-base text-xl underline font-extrabold btn-primary hover:cursor-pointer hover:text-blue-400">
+                        <div className="btn btn-base text-cyan-300 hover:text-cyan-400 text-xl underline font-extrabold btn-primary hover:cursor-pointer">
                           Contact us
                         </div>
                       </Link>
@@ -188,10 +186,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gray-500 mt-72">
+            <div className="bg-gray-600 mt-72">
               <div className="max-w-screen-lg mx-auto px-3 py-16">
                 <div className="text-center">
-                  <span className="text-blue-100 inline-flex items-center font-semibold text-xl">
+                  <span className="text-white inline-flex items-center font-semibold text-xl">
                     <svg
                       className="text-primary-500 stroke-current mr-1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +210,7 @@ export default function Home() {
                     L.A. Quality Painting
                   </span>
                   <div className="mt-8 text-sm">
-                    <div className="footer-copyright">
+                    <div className="footer-copyright text-white">
                       © Copyright 2022 L.A. Quality Painting
                       <p className="text-xs">
                         Developed with{" "}
@@ -221,7 +219,7 @@ export default function Home() {
                         </span>
                         by{" "}
                         <Link href="https://marcoagarcia.com">
-                          <span className="cursor-pointer hover:text-blue-200 underline">
+                          <span className="cursor-pointer text-cyan-200 hover:text-cyan-300">
                             Marco A. Garcia
                           </span>
                         </Link>
