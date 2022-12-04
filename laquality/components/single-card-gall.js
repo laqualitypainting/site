@@ -20,8 +20,8 @@ export default function SimpleGallery(props) {
 
   return (
     <div className="pswp-gallery" id={props.galleryID}>
-      <div className="min-h-screen lg:columns-4">
-        <div className="flex justify-center md:flex-row flex-wrap">
+      <div className="min-h-screen">
+        <div className="flex justify-center lg:columns-4 md:flex-row flex-wrap">
           {props.images.map((image, index) => (
             <a
               href={image.largeURL}

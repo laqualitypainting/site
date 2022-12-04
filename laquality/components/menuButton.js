@@ -6,7 +6,7 @@ const MenuButton = ({
   width = 24,
   height = 24,
   strokeWidth = 1,
-  color = "#000",
+  color = "#FFFFFF",
   transition = { type: "spring", stiffness: 260, damping: 20 },
   lineProps = { strokeLinecap: "round" },
   ...props
@@ -20,7 +20,7 @@ const MenuButton = ({
     opened: {
       rotate: 45,
       translateY: 1,
-      translateX: 1
+      translateX: 0
     }
   };
   const center = {
@@ -39,7 +39,7 @@ const MenuButton = ({
     opened: {
       rotate: -45,
       translateY: 1,
-      translateX: -2
+      translateX:0 
     }
   };
   lineProps = {
@@ -56,7 +56,7 @@ const MenuButton = ({
 
   return (
     <motion.svg
-      viewBox={`0 0 ${unitWidth} ${unitHeight}`}
+      viewBox={`2 0 ${unitWidth} ${unitHeight}`}
       overflow="visible"
       preserveAspectRatio="none"
       width={width}
@@ -82,11 +82,20 @@ const MenuButton = ({
       <motion.line
         x1="0"
         x2={unitWidth}
-        y1="4"
-        y2="4"
+        y1="0"
+        y2="0"
         variants={bottom}
         {...lineProps}
       />
+      <motion.line
+        x1="0"
+        x2={unitWidth}
+        y1="4"
+        y2="4"
+        variants={center}
+        {...lineProps}
+      />
+
     </motion.svg>
   );
 };

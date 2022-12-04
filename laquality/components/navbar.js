@@ -72,7 +72,6 @@ export default function Nav() {
               onClick={() => setNavbarOpen(!navbarOpen)}
               isOpen={navbarOpen}
               color="#FFFFFF"
-              className="text-white cursor-pointer text-xl leading-none px-0 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               strokeWidth="4"
             >
               {menu}
