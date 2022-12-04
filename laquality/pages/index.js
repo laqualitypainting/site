@@ -3,6 +3,8 @@ import Nav from "../components/navbar";
 import roll from "./img/roll.jpg";
 import Image from "next/image";
 import brush from "./img/brush.jpg";
+import Logo from "../public/logoSmall.webp";
+
 import painters from "./img/painters.jpg";
 import { motion } from "framer-motion";
 
@@ -81,11 +83,11 @@ export default function Home() {
               >
                 <div className="max-w-screen-lg mx-auto px-3 pt-20 pb-28">
                   <header className="text-center">
-                    <h1 className="text-5xl text-gray-900 font-bold whitespace-pre-line leading-hero">
-                        L.A. Quality Painting
+                      <Image className="rounded-full shadow-md" src={Logo} />
+                    <h1 className="text-2xl mt-2  text-gray-900 font-bold whitespace-pre-line leading-hero">
+                      If it&apos;s not L.A. Quality, it&apos;s not quality!
                     </h1>
                     <div className="text-2xl text-blue-100 mt-4 mb-10">
-                      If it&apos;s not L.A. Quality, it&apos;s not quality!
                     </div>
                   </header>
                 </div>
@@ -124,7 +126,7 @@ export default function Home() {
                           Quality Work
                         </h3>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
-                          Not all painting companies are created equal. At L.A.
+                           At L.A.
                           Quality we put quality first. We offer reasonable prices with
                           superior quality!
                         </div>

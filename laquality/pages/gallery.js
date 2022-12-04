@@ -75,6 +75,55 @@ function Gallery() {
                 width: 576,
                 height: 1024,
               },
+              
+
+              {
+                largeURL: "/images/paint1.webp",
+                thumbnailURL: "/images/paint1Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/images/paint2.webp",
+                thumbnailURL: "/images/paint2Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/images/paint3.webp",
+                thumbnailURL: "/images/paint3Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/images/paint5.webp",
+                thumbnailURL: "/images/paint5Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/images/paint6.webp",
+                thumbnailURL: "/images/paint6Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/images/paint9.webp",
+                thumbnailURL: "/images/paint9Small.webp",
+                width: 576,
+                height: 1024,
+              },
+              {
+                largeURL: "/images/paint10.webp",
+                thumbnailURL: "/images/paint10Small.webp",
+                width: 576,
+                height: 1024,
+              },
+
+
+
+
+
             ]}
           />
         </div>
