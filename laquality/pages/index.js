@@ -81,12 +81,8 @@ export default function Home() {
               >
                 <div className="max-w-screen-lg mx-auto px-3 pt-20 pb-28">
                   <header className="text-center">
-                    <h1 className="text-5xl text-white font-bold whitespace-pre-line leading-hero">
-                      The new kid on the block
-                      <br />
-                      <span className="text-gray-900">
+                    <h1 className="text-5xl text-gray-900 font-bold whitespace-pre-line leading-hero">
                         L.A. Quality Painting
-                      </span>
                     </h1>
                     <div className="text-2xl text-blue-100 mt-4 mb-10">
                       If it&apos;s not L.A. Quality, it&apos;s not quality!
@@ -101,21 +97,19 @@ export default function Home() {
                 <div className="grid gap-4 place-content-center">
                   <div className="mt-20 flex flex-wrap items-center">
                     <div className="w-full sm:w-1/2 text-center px-6">
-                      <div className="relative flex flex-col max-w-lg break-words bg-gradient-to-l from-sky-500 to-indigo-500 w-full mb-8 mt-8 shadow-2xl rounded-lg">
+                      <div className="relative flex h-64 flex-col max-w-lg break-words bg-gradient-to-l from-sky-500 to-indigo-500 w-full mb-8 mt-8 shadow-2xl rounded-lg">
                         <h2 className="text-3xl pt-6 text-white font-extrabold">
-                          Respectful Workers
+                          Painting services and much more!
                         </h2>
                         <div className="mt-6 text-xl px-3 pb-6 font-medium text-white leading-9">
-                          Quality work means nothing if you don&apos;t get treated
-                          with respect. We take pride in having some of the most
-                          friendliest and respectful workers in all of Alabama!
-                        </div>
+                        Interior/exterior painting services, bathroom remodels, flooring, tile, & more!
+                       </div>
                       </div>
                     </div>
-                    <div className="w-full sm:w-1/2 p-6 pl-auto ">
+                    <div className="w-full sm:w-1/2 p-6 ml-7 md:ml-0 pl-auto ">
                       <Image
                         src={painters}
-                        className="rounded-lg"
+                        className="rounded-lg "
                         alt="painters"
                         width={302}
                         height={475}

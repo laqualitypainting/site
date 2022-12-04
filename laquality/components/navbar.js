@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteTitle } from "./layout";
+import { MenuButton } from "./menuButton";
 
 export const LINKS = [
   { href: "/", label: "Home" },
@@ -47,8 +48,8 @@ export default function Nav() {
                   <span className=" hover:text-blue-300 cursor-pointer">
                     1+(256) 945-1312
                   </span>
-                </Link>
-                {" "} | {" "}
+                </Link>{" "}
+                |{" "}
                 <span className="hover:text-blue-300">
                   <Link href="mailto:contact@laqualitypainting.com">
                     contact@laqualitypainting.com
@@ -67,14 +68,14 @@ export default function Nav() {
                 {siteTitle}
               </a>
             </Link>
-            <button
-              aria-label="hamburger menu"
-              className="text-white cursor-pointer text-xl leading-none px-0 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
+            <MenuButton
               onClick={() => setNavbarOpen(!navbarOpen)}
+              isOpen={navbarOpen}
+              color="#FFFFFF"
+              strokeWidth="4"
             >
               {menu}
-            </button>
+            </MenuButton>
           </div>
           <div
             className={
@@ -83,10 +84,10 @@ export default function Nav() {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex text-white flex-col lg:flex-row list-none lg:ml-auto ml-auto font-bold text-lg px-auto  lg:px-11">
+            <ul className="flex text-white flex-col lg:flex-row list-none lg:ml-auto ml-auto font-bold text-lg px-auto lg:px-11">
               {LINKS.map(({ href, label }) => (
                 <li key={`${href}${label}`}>
-                  <div className="no-underline relative px-4 py-2 font-bold text-white hover:text-blue-400 0">
+                  <div className="no-underline relative px-4 py-2 font-bold text-white hover:text-blue-400">
                     <Link href={href}>{label}</Link>
                   </div>
                 </li>
