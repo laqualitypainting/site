@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'la-bg': "url('/bg.webp')",
+        'la-bgSmall': "url('/bgSmall.webp')",
       }
     },
   },
