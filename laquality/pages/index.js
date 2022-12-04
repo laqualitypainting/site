@@ -83,7 +83,7 @@ export default function Home() {
               >
                 <div className="max-w-screen-lg mx-auto px-3 pt-20 pb-28">
                   <header className="text-center">
-                      <Image className="rounded-full shadow-md" src={Logo} />
+                      <Image alt="LA quality painting logo" className="rounded-full shadow-md" src={Logo} />
                     <h1 className="text-2xl mt-2  text-gray-900 font-bold whitespace-pre-line leading-hero">
                       If it&apos;s not L.A. Quality, it&apos;s not quality!
                     </h1>
