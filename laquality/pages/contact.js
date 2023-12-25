@@ -86,7 +86,7 @@ function Contact() {
           setNumber("")
           setService("")
         } else {
-          console.log(error);
+          console.log(errors);
           setShowSuccessMessage(false);
           setShowFailureMessage(true);
           setButtonText("Send");
