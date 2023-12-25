@@ -56,41 +56,51 @@ function Contact() {
   };
 
   //Handling form submit
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
     let isValidForm = handleValidation();
 
     if (isValidForm) {
+      let data = {
+        name,
+        email,
+        message,
+        number,
+        service,
+      };
       setButtonText("Sending");
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          number: number,
-          service: service,
-          message: message,
-        }),
+      fetch("/api/contact", {
+        method: "POST",
         headers: {
+          Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
-        method: "POST",
+        body: JSON.stringify(data),
+      }).then((res) => {
+        console.log("Response received");
+        if (res.status === 200) {
+          console.log("Response succeeded!");
+          setName("");
+          setEmail("");
+          setMessage("");
+          setNumber("")
+          setService("")
+        } else {
+          console.log(error);
+          setShowSuccessMessage(false);
+          setShowFailureMessage(true);
+          setButtonText("Send");
+          return;
+        }
       });
 
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText("Send");
-        return;
-      }
       setShowSuccessMessage(true);
-      setShowFailureMessage(false);
       setShowValidationMessage(false);
+      setShowFailureMessage(false);
       setButtonText("Send");
     }
   };
+
 
   return (
     <Layout>
