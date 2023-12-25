@@ -21,11 +21,14 @@ export default function (req, res) {
      }
      transporter.sendMail(mailData, function (err, info) {
       if(err){
+        console.log("error on contact api")
         return res.status(err.statusCode || 500);
       }
       else
-        console.log(info)
+        console.log("hit the else")
+        console.log("info:", info)
+        res.sendStatus(200)
     })
   
-    return res.status(200);
+    return res.end();
   }
