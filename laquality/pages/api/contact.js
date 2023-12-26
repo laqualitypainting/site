@@ -24,10 +24,10 @@ export default function (req, res) {
         console.log("error on contact api")
         return res.status(err.statusCode || 500);
       }
-      else
-        console.log("hit the else")
-        console.log("info:", info)
+      else{
+        //console.log("info:", info)
         res.sendStatus(200)
+      }
     })
   
     return res.end();
