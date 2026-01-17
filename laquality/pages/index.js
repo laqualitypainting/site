@@ -215,16 +215,6 @@ export default function Home() {
                     <div className="footer-copyright text-white">
                       © Copyright 2022 L.A. Quality Painting
                       <p className="text-xs">
-                        Developed with{" "}
-                        <span role="img" aria-label="Love" className="text-md">
-                          ♥{" "}
-                        </span>
-                        by{" "}
-                        <Link href="https://marcoagarcia.com">
-                          <span className="cursor-pointer text-cyan-200 hover:text-cyan-300">
-                            Marco A. Garcia
-                          </span>
-                        </Link>
                       </p>
                     </div>
                   </div>
