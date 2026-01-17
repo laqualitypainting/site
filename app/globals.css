@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   Root CSS variables (brand kit)
+   ========================= */
+:root {
+  /* Colors */
+  --color-background: #111111; /* Dark background */
+  --color-foreground: #000000; /* Primary text */
+  --color-primary: #C7AE6A;    /* Gold */
+  --color-secondary: #B99A45;  /* Highlight gold */
+  --color-accent: #D5C28F;     /* Light accent */
+  --color-muted: #2A2A2A;      /* Dark gray / secondary text */
+
+  /* Fonts */
+  --font-heading: var(--font-heading); /* Libre Franklin */
+  --font-body: var(--font-body);       /* Maitree */
+  --font-accent: var(--font-accent);   /* Slabo 13px */
+}
+
+/* Optional dark mode variables (still accessible) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #111111;
+    --color-foreground: #ffffff;
+    --color-muted: #ededed;
+  }
+}
+
+/* =========================
+   Body & typography
+   ========================= */
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body), serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-foreground);
+}
+
+/* Accent / decorative text */
+.accent {
+  font-family: var(--font-accent), cursive;
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+
+/* Class for heading reuse */
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+}
+
+/* =========================
+   Accessibility / contrast
+   ========================= */
+/* Links & interactive elements */
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  color: var(--color-secondary);
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Buttons */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-secondary);
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Small text / captions */
+.caption {
+  font-family: var(--font-accent), cursive;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-muted);
+}
+
+/* Selection colors */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-background);
+}
