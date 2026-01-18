@@ -4,7 +4,7 @@ import { GiLargePaintBrush } from "react-icons/gi";
 export default function Hero() {
   return (
     <section
-  id="hero"
+  id="home"
   className="
     relative
     bg-[#2A2A2A]
